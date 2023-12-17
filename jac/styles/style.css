@@ -21,7 +21,7 @@
 }
 
 * {
-    border: 2px solid red;
+    border: 2px solid red; 
 }
 
 
@@ -29,7 +29,7 @@
 
 .header {
     position: fixed;
-    width: 100%;
+    width: 100vw;
     background-color: transparent;
     z-index: 22222;
     transition: .3s;
