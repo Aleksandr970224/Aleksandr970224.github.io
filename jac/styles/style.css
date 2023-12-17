@@ -20,17 +20,10 @@
     --light-red: #D90429;
 }
 
-html {
-    border: 1px solid red;
+* {
+    border: 2px solid red;
 }
 
-body {
-    border: 1px solid green;
-}
-
-.container {
-    border: 1px solid orange;
-}
 
 /* Header */
 
