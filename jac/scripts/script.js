@@ -11,16 +11,6 @@ const changeColorHeader = () => {
 }
 changeColorHeader();
 
-
-window.addEventListener('resize', (event) => {
-    console.log(event);
-    if (outerWidth < 360) {
-        console.log('yes');
-    } else {
-        console.log('no');
-    }
-})
-
 // Slider car
 
 const swiper = new Swiper('.swiper', {
@@ -81,8 +71,60 @@ const observer = new MutationObserver(callback);
 // Начинаем наблюдение за настроенными изменениями целевого элемента
 arrowsNext.forEach(el => {
     observer.observe(el, config);
-})
+});
 
+
+
+// При клике на картинку слайдера - выводим на основное изображение
+
+let collectionSwiperImg = document.querySelectorAll('.swiper-car img');
+let mainImgSlider = document.querySelectorAll('.main-img-card');
+
+const changeSlideImg = (arr) => {
+    arr.forEach(el => {
+        el.addEventListener('click', () => {
+            console.log(el.src);
+            document.querySelector('.main-img-card').src = el.src;
+        });
+    });
+};
+changeSlideImg(collectionSwiperImg);
+// Только первый работает
+
+
+// Экстерьер, интерьер
+
+let swipExteriorInterior = document.querySelectorAll('.visual-car');
+let swiperExtIn = document.querySelectorAll('.swiper-car.exterior, .swiper-car.interior');
+
+const changeSlider = (arr1, arr2) => {
+    for (let i = 0; i < arr1.length; i++) {
+        arr1[i].addEventListener('click', () => {
+
+            // Добавляем класс активной вкладке слайдера
+            if (arr1[i].classList.contains('in')) {
+                arr1[i].classList.add('active');
+                arr1[i].previousElementSibling.classList.remove('active');
+            } else {
+                arr1[i].classList.add('active');
+                arr1[i].nextElementSibling.classList.remove('active');
+            }
+
+
+            // Меняем слайдеры, в зависимости от активной вкладки
+            if (arr2[i].classList.contains('interior')) {
+                arr2[i].classList.remove('vision');
+                arr2[i].previousElementSibling.classList.remove('vision');
+            } else {
+                arr2[i].classList.remove('vision');
+                arr2[i].nextElementSibling.classList.remove('vision');
+            }
+
+            arr2[i].classList.add('vision');
+        });
+    }
+}
+changeSlider(swipExteriorInterior, swiperExtIn)
 
 
 // Footer

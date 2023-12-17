@@ -59,7 +59,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 142px;
+    height: 112px;
 }
 
 #logo-header {
@@ -69,13 +69,13 @@
 
 .list-nav-header {
     display: flex;
-    height: 140px;
+    height: 112px;
     margin-right: 40px;
 }
 
 .list-nav-header li {
-    padding: 0 22px;
-    height: 141px;
+    padding: 10px 22px 0;
+    height: 112px;
     display: flex;
     align-items: center;
     border-radius: 0 0 5px 5px;
@@ -98,6 +98,7 @@
 
 .list-nav-header li:hover {
     background-color: rgba(43, 45, 66, 0.71);
+    color: var(--light-gray);
 }
 
 .list-nav-header li:hover .line-top {
@@ -522,6 +523,7 @@
 .card-car {
     padding-bottom: 45px;
     display: flex;
+    justify-content: space-between;
 }
 
 .wrapper-colors-n-car {
@@ -538,8 +540,18 @@
     left: 0;
 }
 
+.main-img-card {
+    width: 738px;
+    height: 330px;
+    margin-bottom: 5px;
+}
+
 .wrapper-colors svg:nth-child(3) {
     margin: 15px 0;
+}
+
+.wrapper-swiper-car {
+    position: relative;
 }
 
 .visual-car {
@@ -581,6 +593,23 @@
     visibility: visible;
 }
 
+
+.swiper-car.exterior,
+.swiper-car.interior {
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s;
+    position: absolute;
+    top: 16px;
+}
+
+.swiper-car.exterior.vision,
+.swiper-car.interior.vision {
+    opacity: 1;
+    visibility: visible;
+    position: static;
+}
+
 .swiper-car img {
     width: 154px;
     height: 102px;
@@ -597,8 +626,9 @@
 
 .left-blur {
     position: absolute;
+    top: 14px;
     left: 0;
-    height: 104px;
+    height: 105px;
     width: 154px;
     transform: rotate(180deg);
     background: linear-gradient(268deg, #FFF 14%, rgba(255, 255, 255, 0.00) 117.24%);
@@ -639,8 +669,9 @@
 
 .right-blur {
     position: absolute;
+    top: 14px;
     right: 0;
-    height: 104px;
+    height: 105px;
     width: 154px;
     background: linear-gradient(268deg, #FFF 14%, rgba(255, 255, 255, 0.00) 117.24%);
 
@@ -1802,9 +1833,10 @@
     }
 
     .main-img-card {
-        width: 320px;
+        width: 300px;
+        height: 160px;
         position: relative;
-        left: 20px;
+        left: 38px;
     }
 
     .wrapper-swiper-car {
@@ -1832,6 +1864,7 @@
     .right-blur {
         width: 70px;
         height: 57px;
+        top: 10px;
     }
 
 
