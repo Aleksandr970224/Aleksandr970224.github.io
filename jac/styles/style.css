@@ -20,10 +20,6 @@
     --light-red: #D90429;
 }
 
-* {
-    border: 2px solid red !important; 
-}
-
 
 /* Header */
 
@@ -1860,6 +1856,7 @@
     .table-preference {
         margin: 23px 0 5px;
         font-size: 12px;
+        width: 320px;
         max-width: 320px;
     }
 
