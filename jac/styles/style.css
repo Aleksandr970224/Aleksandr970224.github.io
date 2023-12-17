@@ -20,6 +20,17 @@
     --light-red: #D90429;
 }
 
+html {
+    border: 1px solid red;
+}
+
+body {
+    border: 1px solid green;
+}
+
+.container {
+    border: 1px solid orange;
+}
 
 /* Header */
 
@@ -1664,8 +1675,6 @@
         padding: 0 10px;
         color: #fff;
         font-size: 12px;
-
-        background-color: red;
     }
 
     .wrapper-section-final-sale .form-section-final-sale input[type="text"]::placeholder,
@@ -1679,8 +1688,6 @@
         color: #fff;
         font-size: 12px;
         margin-bottom: 5px;
-
-        background-color: red;
     }
 
     .form-section-final-sale img:first-of-type {
@@ -2071,8 +2078,6 @@
         width: 320px;
         font-size: 12px;
         padding: 0 10px;
-
-        background-color: red;
     }
 
     .border-input-credit-mob {
@@ -2123,8 +2128,6 @@
         width: 320px;
         font-size: 12px;
         padding: 0 10px;
-
-        background-color: red;
     }
 
     .wrapper-left-trade-in .form-section-final-sale input[type="text"] {
