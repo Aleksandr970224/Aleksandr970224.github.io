@@ -183,6 +183,14 @@
     height: 17px;
 }
 
+.offcanvas-body .list-nav-header li:hover {
+    background-color: transparent;
+}
+
+.offcanvas-body .list-nav-header li:hover .line-top {
+    opacity: 0;
+}
+
 .offcanvas-body .btn-call-me {
     width: 320px;
 }
@@ -1551,9 +1559,7 @@
 
 
 @media (min-width: 359px) and (max-width: 450px) {
-    /* .header {
-        background-color: green;
-    } */
+
 
     .container {
         max-width: 360px;
@@ -1658,9 +1664,12 @@
         padding: 0 10px;
         color: #fff;
         font-size: 12px;
+
+        background-color: red;
     }
 
-    .wrapper-section-final-sale .form-section-final-sale input[type="text"]::placeholder {
+    .wrapper-section-final-sale .form-section-final-sale input[type="text"]::placeholder,
+    .wrapper-section-final-sale .form-section-final-sale input[type="tel"]::placeholder {
         color: #fff;
     }
 
@@ -1670,10 +1679,8 @@
         color: #fff;
         font-size: 12px;
         margin-bottom: 5px;
-    }
 
-    .wrapper-section-final-sale .form-section-final-sale input[type="tel"]::placeholder {
-        color: #fff;
+        background-color: red;
     }
 
     .form-section-final-sale img:first-of-type {
@@ -2064,6 +2071,8 @@
         width: 320px;
         font-size: 12px;
         padding: 0 10px;
+
+        background-color: red;
     }
 
     .border-input-credit-mob {
@@ -2114,6 +2123,8 @@
         width: 320px;
         font-size: 12px;
         padding: 0 10px;
+
+        background-color: red;
     }
 
     .wrapper-left-trade-in .form-section-final-sale input[type="text"] {
