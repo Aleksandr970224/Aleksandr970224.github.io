@@ -37,7 +37,7 @@
 }
 
 .container {
-    max-width: 1920px;
+    max-width: 1320px;
     margin: 0 auto;
     position: relative;
 }
@@ -53,7 +53,6 @@
 }
 
 .nav-header {
-    padding: 0 320px;
     position: relative;
     font-family: 'Montserrat', sans-serif;
     display: flex;
@@ -141,7 +140,7 @@
     gap: 5px;
     align-items: center;
     position: absolute;
-    right: 320px;
+    right: 0;
     top: 10px;
     color: var(--dark-blue);
     font-size: 12px;
@@ -153,8 +152,7 @@
 }
 
 .offcanvas {
-    max-width: 101%;
-    /* ???? */
+    max-width: 100%;
 }
 
 .offcanvas-body .addres-header {
@@ -213,7 +211,6 @@
 }
 
 .wrapper-section-final-sale {
-    padding: 0 320px;
     position: relative;
 }
 
@@ -499,10 +496,6 @@
     padding-top: 160px;
 }
 
-.wrapper-section-models {
-    padding: 0 320px;
-}
-
 .title-section-models {
     color: var(--dark-blue);
     font-family: 'Montserrat', sans-serif;
@@ -568,9 +561,12 @@
     font-weight: 700;
 }
 
+.visual-car:hover {
+    cursor: pointer;
+}
+
 .swiper {
     width: 660px;
-    /* height: 104px; */
     padding-top: 16px;
     padding-bottom: 5px;
     display: flex;
@@ -585,7 +581,22 @@
     transition: .3s;
     position: absolute;
     left: 0;
+    top: 85px;
     z-index: 33;
+}
+
+.swiper-button-prev.first,
+.swiper-button-next.first {
+    top: 70px;
+}
+
+.swiper-car.interior .swiper-button-prev,
+.swiper-car.interior .swiper-button-next {
+    top: 70px;
+}
+
+.swiper-car.interior .swiper-button-next {
+    right: 0;
 }
 
 .left-arrow-swiper.active {
@@ -626,7 +637,7 @@
 
 .left-blur {
     position: absolute;
-    top: 14px;
+    /* top: 0; */
     left: 0;
     height: 105px;
     width: 154px;
@@ -647,12 +658,17 @@
 .swiper-button-next {
     transition: .3s;
     position: absolute;
-    right: 0;
+    right: 79px;
+    top: 85px;
     z-index: 33;
 
 
     opacity: 1;
     visibility: visible;
+}
+
+.swiper-button-next.first {
+    right: 0;
 }
 
 .swiper-button-next.swiper-button-disabled,
@@ -669,8 +685,8 @@
 
 .right-blur {
     position: absolute;
-    top: 14px;
-    right: 0;
+    /* top: 0; */
+    right: 78px;
     height: 105px;
     width: 154px;
     background: linear-gradient(268deg, #FFF 14%, rgba(255, 255, 255, 0.00) 117.24%);
@@ -679,6 +695,15 @@
 
     opacity: 1;
     visibility: visible;
+}
+
+.right-blur.first {
+    right: 0;
+}
+
+.swiper-car.interior .right-blur {
+    top: 10px;
+    right: 0;
 }
 
 .right-blur.hidden {
@@ -785,10 +810,6 @@
 
 
 /* Section equipment */
-
-.wrapper-section-equipment {
-    padding: 0 320px;
-}
 
 .title-section-equipment {
     padding: 40px 0;
@@ -958,7 +979,7 @@
 }
 
 .wrapper-section-credit {
-    padding: 0 320px 17px;
+    padding-bottom: 17px;
     background-image: url('../images/main/section-credit/Rectangle120.png');
     background-size: cover;
     background-repeat: no-repeat;
@@ -966,7 +987,7 @@
 
 .main-car-credit {
     position: absolute;
-    left: 0;
+    left: -320px;
     bottom: 0;
 }
 
@@ -1062,19 +1083,13 @@
 
 .section-trade-in {
     padding-top: 67px;
+    overflow: hidden;
     border-bottom: 10px solid var(--dark-blue);
-}
-
-.wrapper-section-trade-in {
-    padding: 0 320px;
-    /* background-image: url('../images/main/section-credit/Rectangle120.png');
-    background-size: cover;
-    background-repeat: no-repeat; */
 }
 
 .main-car-trade-in {
     position: absolute;
-    right: 0;
+    right: -320px;
     bottom: 0;
 }
 
@@ -1162,7 +1177,7 @@
 }
 
 .wrapper-section-map {
-    padding: 138px 320px 0;
+    padding-top: 138px;
 }
 
 .wrapper-section-map.mobile {
@@ -1258,10 +1273,6 @@
     padding-bottom: 50px;
 }
 
-.wrapper-footer-content {
-    padding: 0 320px;
-}
-
 .data-company {
     color: #000;
     font-family: 'Montserrat', sans-serif;
@@ -1291,7 +1302,6 @@
 }
 
 .btn-show-full-oferta {
-    /* margin-top: 15px; */
     border: none;
     outline: none;
     padding: 0;
@@ -1589,16 +1599,15 @@
 
 
 
-@media (min-width: 359px) and (max-width: 450px) {
+@media(max-width: 600px) {
 
 
     .container {
-        max-width: 360px;
+        width: calc(100% - 40px);
     }
 
     /* Header */
     .nav-header {
-        padding: 0 20px;
         height: 73px;
     }
 
@@ -1635,10 +1644,6 @@
     .section-final-sale {
         padding-top: 80px;
         background-size: 365%;
-    }
-
-    .wrapper-section-final-sale {
-        padding: 0 20px;
     }
 
     .title-section-final-sale {
@@ -1795,10 +1800,6 @@
         padding-top: 135px;
     }
 
-    .wrapper-section-models {
-        padding: 0 20px;
-    }
-
     .title-section-models {
         font-size: 21px;
     }
@@ -1857,16 +1858,39 @@
     .swiper-button-prev {
         width: 13px;
         height: 13px;
-        top: 53px;
+        top: 85px;
+        right: 14px;
     }
+
+    .swiper-car.interior .swiper-button-prev,
+    .swiper-car.interior .swiper-button-next {
+        top: 55px;
+     }
 
     .left-blur,
     .right-blur {
         width: 70px;
         height: 57px;
+        top: 40px;
+    }
+
+    .swiper-car.interior .left-blur {
         top: 10px;
     }
 
+    .right-blur {
+        right: 0;
+    }
+
+    .right-blur.first,
+    .left-blur.first {
+        top: 10px;
+    }
+
+    .swiper-button-prev.first,
+     .swiper-button-next.first {
+        top: 55px;
+     }
 
     .right-card-car {
         padding-top: 25px;
@@ -1935,10 +1959,6 @@
     }
 
     /* Section equipment */
-    .wrapper-section-equipment {
-        padding: 0 20px;
-    }
-
 
     .title-section-equipment {
         font-size: 21px;
@@ -2029,13 +2049,13 @@
     }
 
     .wrapper-section-credit {
-        padding: 0 20px;
         background-image: none;
     }
 
     .main-car-credit {
-        width: 360px;
+        width: 100%;
         top: -50px;
+        left: 0;
     }
 
     .wrapper-right-credit {
@@ -2132,13 +2152,10 @@
         padding-top: 33px;
     }
 
-    .wrapper-section-trade-in {
-        padding: 0 20px;
-    }
-
     .main-car-trade-in {
         top: 0;
-        width: 360px;
+        width: 100%;
+        right: 0;
     }
 
     .wrapper-left-trade-in .form-section-final-sale {
@@ -2243,10 +2260,6 @@
         padding-top: 300px;
     }
 
-    .wrapper-footer-content {
-        padding: 0 20px;
-    }
-
     .data-company {
         font-size: 12px;
         width: 318px;
@@ -2316,7 +2329,6 @@
         left: 0;
         width: 100%;
         z-index: -2;
-        /* height: 136px; */
     }
 
     .modal-offer-open .form-section-final-sale .wrapper-pers-data {
