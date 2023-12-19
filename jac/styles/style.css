@@ -83,7 +83,7 @@
 }
 
 .list-nav-header li .line-top {
-    background-color: #fff;
+    background-color: var(--light-gray);
     width: 100%;
     height: 7px;
     outline: none;
@@ -135,6 +135,10 @@
     text-decoration: none;
 }
 
+.tel-nav-header:hover {
+    color: var(--light-gray);
+}
+
 .addres-header {
     display: flex;
     gap: 5px;
@@ -174,20 +178,19 @@
     height: 390px;
     margin-right: 0;
     padding-top: 20px;
-    gap: 29px;
+    gap: 18px;
 }
 
 .offcanvas-body .list-nav-header li {
-    padding: 0;
+    padding: 19px 0 19px 26px;
     height: 17px;
+    max-width: 270px;
+    right: 16px;
+    border-radius: 0 0 5px 0;
 }
 
-.offcanvas-body .list-nav-header li:hover {
-    background-color: transparent;
-}
-
-.offcanvas-body .list-nav-header li:hover .line-top {
-    opacity: 0;
+.offcanvas-body .list-nav-header li .line-top {
+    top: -22px;
 }
 
 .offcanvas-body .btn-call-me {
@@ -429,7 +432,6 @@
     background-repeat: no-repeat;
     background-size: cover;
     position: absolute;
-    right: 0;
     bottom: -120px;
     z-index: 2222;
     border-bottom: 7px solid var(--dark-blue);
@@ -548,6 +550,8 @@
 
 .wrapper-swiper-car {
     position: relative;
+    /* height: 141px;
+    overflow: hidden; */
 }
 
 .visual-car {
@@ -558,6 +562,8 @@
     text-transform: uppercase;
     display: inline-block;
     margin-right: 12px;
+    position: relative;
+    z-index: 44;
 }
 
 .visual-car.active {
@@ -584,23 +590,10 @@
     transition: .3s;
     position: absolute;
     left: 0;
-    top: 85px;
+    top: 70px;
     z-index: 33;
 }
 
-.swiper-button-prev.first,
-.swiper-button-next.first {
-    top: 70px;
-}
-
-.swiper-car.interior .swiper-button-prev,
-.swiper-car.interior .swiper-button-next {
-    top: 70px;
-}
-
-.swiper-car.interior .swiper-button-next {
-    right: 0;
-}
 
 .left-arrow-swiper.active {
     opacity: 1;
@@ -614,14 +607,15 @@
     visibility: hidden;
     transition: .3s;
     position: absolute;
-    top: 16px;
+    top: 0;
 }
 
 .swiper-car.exterior.vision,
 .swiper-car.interior.vision {
     opacity: 1;
     visibility: visible;
-    position: static;
+    /* position: static; */
+    position: relative;
 }
 
 .swiper-car img {
@@ -661,17 +655,13 @@
 .swiper-button-next {
     transition: .3s;
     position: absolute;
-    right: 79px;
-    top: 85px;
+    right: 0;
+    top: 70px;
     z-index: 33;
 
 
     opacity: 1;
     visibility: visible;
-}
-
-.swiper-button-next.first {
-    right: 0;
 }
 
 .swiper-button-next.swiper-button-disabled,
@@ -689,7 +679,7 @@
 .right-blur {
     position: absolute;
     /* top: 0; */
-    right: 78px;
+    right: 0;
     height: 105px;
     width: 154px;
     background: linear-gradient(268deg, #FFF 14%, rgba(255, 255, 255, 0.00) 117.24%);
@@ -698,10 +688,6 @@
 
     opacity: 1;
     visibility: visible;
-}
-
-.right-blur.first {
-    right: 0;
 }
 
 .swiper-car.interior .right-blur {
@@ -1092,7 +1078,7 @@
 
 .main-car-trade-in {
     position: absolute;
-    right: -320px;
+    right: -300px;
     bottom: 0;
 }
 
@@ -1166,6 +1152,11 @@
 
 .section-map {
     height: 496px;
+    background-image: url('../images/main/section-map/image673.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    max-width: 1920px;
+    margin: 0 auto;
 }
 
 .bg-map {
@@ -1174,9 +1165,8 @@
 
 .section-map .container {
     height: 100%;
-    background-image: url('../images/main/section-map/image673.png');
-    background-size: cover;
-    background-repeat: no-repeat;
+
+    background-image: none;
 }
 
 .wrapper-section-map {
@@ -1190,7 +1180,7 @@
 
 .wrapper-dot-map {
     position: absolute;
-    left: 856px;
+    left: 566px;
     top: 187px;
 }
 
@@ -1780,7 +1770,7 @@
     .wrapper-timer-sale {
         max-width: 360px;
         padding-left: 20px;
-        bottom: -101px;
+        bottom: -102px;
     }
 
     .text-timer {
@@ -1861,38 +1851,19 @@
     .swiper-button-prev {
         width: 13px;
         height: 13px;
-        top: 85px;
-        right: 14px;
-    }
-
-    .swiper-car.interior .swiper-button-prev,
-    .swiper-car.interior .swiper-button-next {
         top: 55px;
+        right: 14px;
     }
 
     .left-blur,
     .right-blur {
         width: 70px;
         height: 57px;
-        top: 40px;
-    }
-
-    .swiper-car.interior .left-blur {
         top: 10px;
     }
 
     .right-blur {
         right: 0;
-    }
-
-    .right-blur.first,
-    .left-blur.first {
-        top: 10px;
-    }
-
-    .swiper-button-prev.first,
-    .swiper-button-next.first {
-        top: 55px;
     }
 
     .right-card-car {
@@ -2216,10 +2187,10 @@
     /* Map */
     .section-map {
         height: 350px;
+        background-image: none;
     }
 
     .section-map .container {
-        background-image: none;
         overflow: hidden;
     }
 
@@ -2253,7 +2224,7 @@
         border-radius: 0;
     }
 
-    .wrapper-dot-map {
+    .section-map .wrapper-dot-map {
         left: 100px;
         top: 102px;
     }
@@ -2648,5 +2619,21 @@
     .modal-question .bg-question {
         left: -124px;
         transform: rotate(177deg);
+    }
+}
+
+@media (max-width: 1919px) {
+    .section-map {
+        background-image: none;
+    }
+
+    .section-map .container {
+        background-image: url('../images/main/section-map/image673.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .wrapper-dot-map {
+        left: 856px;
     }
 }
