@@ -212,6 +212,9 @@
 
 .wrapper-section-final-sale {
     position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .bg-shadow {
@@ -1865,7 +1868,7 @@
     .swiper-car.interior .swiper-button-prev,
     .swiper-car.interior .swiper-button-next {
         top: 55px;
-     }
+    }
 
     .left-blur,
     .right-blur {
@@ -1888,9 +1891,9 @@
     }
 
     .swiper-button-prev.first,
-     .swiper-button-next.first {
+    .swiper-button-next.first {
         top: 55px;
-     }
+    }
 
     .right-card-car {
         padding-top: 25px;
