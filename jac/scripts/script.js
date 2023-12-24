@@ -75,23 +75,6 @@ arrowsNext.forEach(el => {
 
 
 
-// При клике на картинку слайдера - выводим на основное изображение
-
-let collectionSwiperImg = document.querySelectorAll('.swiper-car img');
-let mainImgSlider = document.querySelectorAll('.main-img-card');
-
-const changeSlideImg = (arr) => {
-    arr.forEach(el => {
-        el.addEventListener('click', () => {
-            console.log(el.src);
-            document.querySelector('.main-img-card').src = el.src;
-        });
-    });
-};
-changeSlideImg(collectionSwiperImg);
-// Только первый работает
-
-
 // Экстерьер, интерьер
 
 let swipExteriorInterior = document.querySelectorAll('.visual-car');
